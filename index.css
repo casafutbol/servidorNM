@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidor 192.168.0.29</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .container {
+      background: white;
+      margin: auto;
+      padding: 30px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Presentación empresas de la construcción (ERP) 27 Mayo 2025</h1>
+    <video width="640" height="360" controls>
+      <source src="rotura_tuberia_milladoiro.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <p>Haz clic en el siguiente enlace para visitar nuestro sitio</p>
+    <a href="https://www.bing.com/">Ir al sitio</a>
+  </div>
+</body>
+</html>
