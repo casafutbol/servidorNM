@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src/Front",
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/Front"],
+  "exclude": ["node_modules", "dist"]
+}
