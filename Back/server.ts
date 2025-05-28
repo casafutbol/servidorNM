@@ -24,4 +24,8 @@ app.get('/', (req, res) => {
 // Arrancar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> b79942a5842a8bd661b61c4130eae4b2510982ce
