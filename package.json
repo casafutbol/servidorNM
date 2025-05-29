@@ -8,6 +8,16 @@
   "devDependencies": {
     "@types/express": "^5.0.2",
     "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5"
+    "@types/react-dom": "^19.1.5",
+    "typescript": "^5.1.6",
+    "eslint": "^8.47.0",
+    "jest": "^29.6.0",
+    "@types/jest": "^29.5.3",
+    "ts-jest": "^29.1.1"
+  },
+  "scripts": {
+    "build": "tsc",            // Compila TypeScript (si usas TS)
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",  // Corre eslint para revisar el código
+    "test": "jest"             // Ejecuta tests con Jest
   }
 }
