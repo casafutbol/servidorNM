@@ -1,12 +1,17 @@
 /** @type {import('jest').Config} */
 const config = {
-  testEnvironment: 'jsdom',  // para tests React en navegador simulado
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom', // o 'node' si no usas React
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',  // para compilar TypeScript
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],  // Opcional: para configurar entorno test
+  testMatch: [
+    '**/__tests__/**/*.+(ts|tsx|js)',
+    '**/?(*.)+(spec|test).+(ts|tsx|js)',
+  ],
+  roots: ['<rootDir>/test'],
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'], // <-- eliminada esta línea
 };
 
 module.exports = config;
