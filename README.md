@@ -35,7 +35,7 @@ en package.json
 
 SQLite3:
 bash
-npm install sqlite3
+npm install sqlite3 // (aunque se ha instalado Dbeaver de BBDD que lo tiene integrado)
 
 Posiblemente: nodemon,
 para reiniciar el servidor
