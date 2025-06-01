@@ -8,6 +8,11 @@ Probando Workflow,cuidado si estais trabajando en main, que "no le gusta" a los 
 Pagina sencilla visualmente con un reproductor de video de la Asociacion de Empresarios del Milladoiro y un enlace a su pagina Oficial,pero que en Vercel https://servidor-nm.vercel.app/ (integrada desde GitHub) funciona
 he selecionado la carpeta Front como Root, pero en Back está el formulario de logueo cd .. Front (npm run dev) / cd .. Back (node server)
 
+Env (test)
+ Copiar `.env.example` a `.env`
+ Completar los valores según tu entorno local
+
+
 Resumen de instalaciones:
 🔧 Instalaciones en el Backend (Node.js + Express + SQLite)
 ● Node.js y npm (preinstalado o instalado previamente)
