@@ -1,14 +1,15 @@
 import express from 'express';
 import * as path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Servir la carpeta "public"
 const publicDir = path.join(__dirname, 'public');
 app.use(express.static(publicDir));
 
-// Página principal o de ejemplo
 app.get('/', (req, res) => {
   res.send(`
     <html>
@@ -21,11 +22,6 @@ app.get('/', (req, res) => {
   `);
 });
 
-// Arrancar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> b79942a5842a8bd661b61c4130eae4b2510982ce
