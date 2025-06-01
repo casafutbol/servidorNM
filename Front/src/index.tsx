@@ -16,7 +16,7 @@ const App = () => (
       allowFullScreen
     ></iframe>
 
-    <p>Haz clic en el siguiente enlace para visitar nuestro sitio</p>
+    <p>Haz clic en el siguiente enlace para visitar el sitio</p>
     <button>
       <a href="https://aenovomilladoiro.com/es/inicio/" target="_blank" rel="noopener noreferrer">
         Ir al sitio
