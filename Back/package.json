@@ -1,15 +1,18 @@
 {
+  "name": "mi-proyecto",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "dev": "ts-node-esm src/server.ts",
     "build": "tsc",
-    "dev": "ts-node-esm src/server.ts"
+    "start": "node --loader ts-node/esm src/server.ts"
   },
   "dependencies": {
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
-
