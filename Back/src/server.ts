@@ -11,12 +11,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Mostrar formulario al acceder a /
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.sendFile(path.join(publicPath, 'formulario.html'));
 });
 
 // Procesar datos enviados por el formulario
-app.post('/procesar-formulario', (req, res) => {
+app.post('/procesar-formulario', (req: { body: any; }, res: { send: (arg0: string) => void; }) => {
   const nuevoDato = req.body;
 
   // Leer datos existentes (si el archivo existe)
