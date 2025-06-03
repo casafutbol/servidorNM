@@ -5,8 +5,10 @@
   "type": "module",
   "main": "Back/server.ts",
   "scripts": {
-    "start": "ts-node Back/server.ts",
-    "dev": "nodemon Back/server.ts"
+    "start": "ts-node Back/server.ts",     
+    "dev": "nodemon Back/server.ts",        
+    "build": "tsc",                         
+    "serve": "node dist/Back/server.js"    
   },
   "dependencies": {
     "cors": "^2.8.5",
