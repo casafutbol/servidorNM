@@ -1,5 +1,17 @@
-<form action="/guardar-usuario" method="POST">
-  <input type="text" name="nombre" placeholder="Nombre" required />
-  <input type="email" name="email" placeholder="Email" required />
-  <button type="submit">Enviar</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario de Datos</title>
+</head>
+<body>
+  <h1>Formulario de Datos</h1>
+  <form action="/procesar-formulario" method="POST">
+    <label>Trabajador: <input type="text" name="trabajador" required /></label><br />
+    <label>Estado en empresa: <input type="text" name="estado" required /></label><br />
+    <label>Vacaciones: <input type="text" name="vacaciones" required /></label><br />
+    <label>Email: <input type="email" name="email" required /></label><br />
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

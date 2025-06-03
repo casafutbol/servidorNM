@@ -1,14 +1,1 @@
-[
-  {
-    "trabajador": "Pedro",
-    "estado": "Activo",
-    "vacaciones": "No hasta el año que viene",
-    "email": "cesjavier@gmail.com"
-  },
-  {
-    "trabajador": "Prueba",
-    "estado": "De Baja",
-    "vacaciones": "Navidad,Pascua y Verano ",
-    "email": "eldelospalotes@gmail.com"
-  }
-]
+[]

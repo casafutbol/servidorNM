@@ -1,6 +1,45 @@
-<!-- Formulario usuarios -->
-<form method="POST" action="/guardarUsuario">
-  <label>nombre: <input name="nombre" required></label><br>
-<label>email: <input type="email" name="email" required></label><br>
-  <button type="submit">Guardar Usuario</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Usuarios guardados</title>
+</head>
+<body>
+  <h1>Usuarios guardados</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Trabajador</th>
+        <th>Estado</th>
+        <th>Vacaciones</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="tablaUsuarios">
+      <!-- Aquí van los datos -->
+    </tbody>
+  </table>
+
+  <script>
+    const tbody = document.getElementById('tablaUsuarios');
+
+    // Obtener datos guardados
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    if (usuarios.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4">No hay usuarios guardados</td></tr>';
+    } else {
+      usuarios.forEach(user => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${user.trabajador}</td>
+          <td>${user.estado}</td>
+          <td>${user.vacaciones}</td>
+          <td>${user.email}</td>
+        `;
+        tbody.appendChild(fila);
+      });
+    }
+  </script>
+</body>
+</html>

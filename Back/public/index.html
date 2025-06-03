@@ -2,24 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Formulario de Datos</title>
 </head>
 <body>
-  <h2>Formulario de Datos</h2>
-  <form action="/procesar-formulario" method="POST">
-    <label for="trabajador">Trabajador:</label><br />
-    <input type="text" id="trabajador" name="trabajador" required /><br /><br />
-
-    <label for="estado">Estado en empresa:</label><br />
-    <input type="text" id="estado" name="estado" required /><br /><br />
-
-    <label for="vacaciones">Vacaciones:</label><br />
-    <input type="text" id="vacaciones" name="vacaciones" required /><br /><br />
-
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" required /><br /><br />
-
+  <h1>Formulario de Datos</h1>
+  <form action="http://localhost:3000/procesar-formulario" method="POST">
+    <label>Trabajador: <input type="text" name="trabajador" required /></label><br />
+    <label>Estado en empresa: <input type="text" name="estado" required /></label><br />
+    <label>Vacaciones: <input type="text" name="vacaciones" required /></label><br />
+    <label>Email: <input type="email" name="email" required /></label><br />
     <button type="submit">Enviar</button>
   </form>
 </body>
