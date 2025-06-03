@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario de Datos</title>
+</head>
+<body>
+  <h2>Formulario de Datos</h2>
+  <form action="/procesar-formulario" method="POST">
+    <label for="trabajador">Trabajador:</label><br />
+    <input type="text" id="trabajador" name="trabajador" required /><br /><br />
+
+    <label for="estado">Estado en empresa:</label><br />
+    <input type="text" id="estado" name="estado" required /><br /><br />
+
+    <label for="vacaciones">Vacaciones:</label><br />
+    <input type="text" id="vacaciones" name="vacaciones" required /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+
