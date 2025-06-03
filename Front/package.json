@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev-server": "ts-node-esm src/server.ts",
+=======
+>>>>>>> 16cf880f03dc48b8838f47f03e007fe959c0c930
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
