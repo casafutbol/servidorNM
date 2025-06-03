@@ -1,24 +1,17 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:tsconfig.json
->>>>>>> 16cf880f03dc48b8838f47f03e007fe959c0c930
     "target": "es2020",
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-<<<<<<< HEAD
     "allowJs": true,
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
-=======
     "skipLibCheck": true,
     "strict": true,
-========
     "target": "ESNext",
     "lib": ["DOM", "ESNext"],
     "jsx": "react-jsx",
@@ -26,20 +19,12 @@
     "moduleResolution": "Node",
     "strict": true,
     "esModuleInterop": true,
->>>>>>>> 16cf880f03dc48b8838f47f03e007fe959c0c930:Front/tsconfig.json
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist"
   },
-<<<<<<<< HEAD:tsconfig.json
->>>>>>> 16cf880f03dc48b8838f47f03e007fe959c0c930
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
   }
-<<<<<<< HEAD
-=======
-========
   "include": ["src"]
->>>>>>>> 16cf880f03dc48b8838f47f03e007fe959c0c930:Front/tsconfig.json
->>>>>>> 16cf880f03dc48b8838f47f03e007fe959c0c930
 }
