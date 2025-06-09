@@ -1,22 +1,26 @@
-import { Router, Request, Response } from 'express';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import express, { Request, Response } from "express";
+import fs from "fs";
+import path from "path";
 
-const router = Router();
+const router = express.Router();
+
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const datosPath = path.resolve(__dirname, '../../datos.json');
+const __dirname = dirname(__filename);
+
+const datosPath = path.join(__dirname, "../../datos.json");
+
 
 router.post('/', (req: Request, res: Response) => {
-  const { usuario, password } = req.body as { usuario: string; password: string };
+  const { usuario, password } = req.body;
 
   if (!usuario || !password) {
     return res.status(400).json({ message: 'Faltan credenciales' });
   }
 
-  let datos = [];
+  let datos: any[] = [];
   if (fs.existsSync(datosPath)) {
     datos = JSON.parse(fs.readFileSync(datosPath, 'utf-8'));
   }
@@ -28,6 +32,6 @@ router.post('/', (req: Request, res: Response) => {
   } else {
     return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
   }
-});
+}); // <--- ESTA CIERRA EL router.post
 
-export default router;
+export default router; // <--- ESTA VA FUERA DEL router.post

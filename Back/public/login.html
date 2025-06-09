@@ -16,14 +16,31 @@ document.getElementById('loginForm').onsubmit = async function(e) {
   e.preventDefault();
   const usuario = e.target.usuario.value;
   const password = e.target.password.value;
-  const res = await fetch('/api/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ usuario, password })
-  });
-  const data = await res.json();
-  alert(data.message);
+  try {
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ usuario, password })
+    });
+    const data = await res.json();
+    alert(data.message);
+  } catch (err) {
+    alert('Error de conexión o del servidor');
+    console.error(err);
+  }
 };
 </script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d5292;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+  </style>
 </body>
 </html>
