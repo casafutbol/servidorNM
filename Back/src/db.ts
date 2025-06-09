@@ -1,10 +1,14 @@
-// src/db.ts
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
+import path from 'path';
 
-export async function openDB() {
-  return open({
-    filename: './nobomilladoiro.db', // ruta a tu archivo DB
-    driver: sqlite3.Database
+const defaultDbPath = path.join(__dirname, '../db/novomilladoiro.sqlite');
+
+export async function openDB(): Promise<any> {
+  const db = await open({
+    filename: defaultDbPath,
+    driver: sqlite3.Database,
   });
+  return db;
 }
+

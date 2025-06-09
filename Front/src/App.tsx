@@ -1,12 +1,20 @@
-// src/App.tsx
-import React from 'react';
+// App.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Home from './pages/Home'; // tu página principal
+import NotFound from './pages/NotFound';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div>
-      <h1>Hola desde App.tsx</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
+

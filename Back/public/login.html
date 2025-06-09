@@ -1,4 +1,3 @@
-<!-- Back/public/login.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,10 +6,24 @@
 </head>
 <body>
   <h1>Iniciar sesión</h1>
-  <form>
-    <input type="text" placeholder="Usuario" />
-    <input type="password" placeholder="Contraseña" />
+  <form id="loginForm">
+    <input type="text" name="usuario" placeholder="Usuario" required />
+    <input type="password" name="password" placeholder="Contraseña" required />
     <button type="submit">Entrar</button>
   </form>
+ <script>
+document.getElementById('loginForm').onsubmit = async function(e) {
+  e.preventDefault();
+  const usuario = e.target.usuario.value;
+  const password = e.target.password.value;
+  const res = await fetch('/api/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ usuario, password })
+  });
+  const data = await res.json();
+  alert(data.message);
+};
+</script>
 </body>
 </html>

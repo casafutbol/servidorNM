@@ -1,15 +1,14 @@
-<!-- Puedes poner esto en Front/index.html -->
-<form id="loginForm">
+<form id="registroForm">
   <input type="text" name="usuario" placeholder="Usuario" required />
   <input type="password" name="password" placeholder="Contraseña" required />
-  <button type="submit">Entrar</button>
+  <button type="submit">Registrarse</button>
 </form>
 <script>
-document.getElementById('loginForm').onsubmit = async function(e) {
+document.getElementById('registroForm').onsubmit = async function(e) {
   e.preventDefault();
   const usuario = e.target.usuario.value;
   const password = e.target.password.value;
-  const res = await fetch('http://localhost:3000/api/auth/login', {
+  const res = await fetch('/api/registro', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ usuario, password })
