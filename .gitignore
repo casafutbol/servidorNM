@@ -1,32 +1,4 @@
-# Dependencias
-node_modules/
-package-lock.json
-yarn.lock
-
-# Salidas de compiladores o herramientas
-dist/
-build/
-out/
-
-# Archivos de configuración de entorno
+/dist
+/node_modules
+*.sqlite
 .env
-.env.*.local
-
-# Archivos de logs y temporales
-*.log
-*.tmp
-*.tsbuildinfo
-
-# Directorios de cobertura de pruebas
-coverage/
-test-output/
-
-# Archivos del sistema / IDE
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Archivos temporales de editores
-*.swp
-*.swo
