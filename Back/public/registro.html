@@ -1,22 +1,9 @@
-<form id="registroForm">
-  <input type="text" name="usuario" placeholder="Usuario" required />
-  <input type="password" name="password" placeholder="Contraseña" required />
-  <button type="submit">Registrarse</button>
-</form>
-<script>
-document.getElementById('registroForm').onsubmit = async function(e) {
-  e.preventDefault();
-  const usuario = e.target.usuario.value;
-  const password = e.target.password.value;
-  const res = await fetch('/api/registro', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ usuario, password })
-  });
-  const data = await res.json();
-  alert(data.message);
-};
-</script><style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #0d5292;
@@ -28,3 +15,24 @@ document.getElementById('registroForm').onsubmit = async function(e) {
       color: #4CAF50;
     }
   </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <button><a href="http://localhost:3000/">Home</a></button>
+      <button><a href="http://localhost:3000/login.html">Verificación</a></button>
+      <button><a href="http://localhost:3000/usuarios.html">Tabla Usuarios Registrados</a></button>
+    </nav>
+  </header>
+
+  <h1>Registro de Usuario</h1>
+  <form id="registroForm">
+    <input type="text" name="usuario" placeholder="Usuario" required />
+    <input type="password" name="password" placeholder="Contraseña" required />
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <script>
+    document.getElementById('registroForm').onsubmit = async function(e) {
+      e.preven
