@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro</title>
+</head>
+<body>
+  <h1>Registro</h1>
+  <form id="registroForm">
+    <label>Nombre: <input type="text" name="nombre" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Password: <input type="password" name="password" required></label><br>
+    <button type="submit">Registrar</button>
+  </form>
+
+  <p id="mensaje"></p>
+
+  <script>
+    const form = document.getElementById('registroForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const resp = await fetch('/registro', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        });
+
+        const msg = document.getElementById('mensaje');
+        if (resp.ok) {
+          msg.textContent = 'Usuario registrado correctamente';
+          form.reset();
+        } else {
+          const text = await resp.text();
+          msg.textContent = 'Error: ' + text;
+        }
+      } catch (error) {
+        document.getElementById('mensaje').textContent = 'Error: ' + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

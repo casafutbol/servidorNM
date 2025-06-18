@@ -1,0 +1,26 @@
+{
+  "name": "servidornm",
+  "version": "1.0.0",
+  "description": "Servidor Node.js con Express y TypeScript para el proyecto NM",
+  "type": "module",
+  "main": "Back/server.ts",
+  "scripts": {
+    "start": "ts-node Back/server.ts",
+    "dev": "nodemon Back/server.ts",
+    "build": "tsc",
+    "serve": "node dist/Back/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.29",
+    "@types/sqlite3": "^3.1.11",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

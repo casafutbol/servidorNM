@@ -1,0 +1,106 @@
+/* Quitar los botones de número en los inputs type=number */
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Internet Explorer */
+input[type=number] {
+  -ms-appearance: textfield;
+}
+
+/* Contenedor */
+.product-form {
+  position: relative;
+  width: 608px;
+  height: 644px;
+  background: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+/* Labels */
+.product-form label[for="nome"],
+.product-form label[for="codigo"],
+.product-form label[for="stock"],
+.product-form label[for="tipo"],
+.product-form label[for="peso"],
+.product-form label[for="precio"] {
+  position: absolute;
+  width: 111px;
+  height: 25px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Posiciones específicas para cada label */
+.product-form label[for="nome"] { top: 256px; left: 47px; }
+.product-form label[for="codigo"] { top: 256px; left: 193px; }
+.product-form label[for="stock"] { top: 341px; left: 48px; }
+.product-form label[for="tipo"] { top: 411px; left: 48px; }
+.product-form label[for="peso"] { top: 478px; left: 48px; }
+.product-form label[for="precio"] { top: 554px; left: 48px; }
+
+/* Inputs */
+.product-form #nome,
+.product-form #codigo,
+.product-form #stock,
+.product-form #tipo,
+.product-form #peso,
+.product-form #precio {
+  position: absolute;
+  border: 1px solid rgba(76,141,235,0.1865);
+  border-radius: 3px;
+  background-color: white;
+  height: 33px;
+}
+
+/* Tamaños y posiciones específicas de inputs */
+.product-form #nome {
+  top: 281px;
+  left: 48px;
+  width: 97px;
+}
+
+.product-form #codigo {
+  top: 281px;
+  left: 193px;
+  width: 198px;
+}
+
+.product-form #stock {
+  top: 365px;
+  left: 47px;
+  width: 343px;
+}
+
+.product-form #tipo {
+  top: 438px;
+  left: 47px;
+  width: 343px;
+}
+
+.product-form #peso {
+  top: 508px;
+  left: 47px;
+  width: 343px;
+}
+
+.product-form #precio {
+  top: 583px;
+  left: 47px;
+  width: 343px;
+}
